@@ -80,3 +80,4 @@ _[Ss]cripts
 .k6/**/.env
 .k6/node_modules
 .k6/dist
+out/

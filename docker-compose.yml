@@ -1,0 +1,27 @@
+volumes:
+  databasevolume:
+  rabbitmqvolume:
+
+
+networks:
+  fazumpix:
+    name: fazumpix
+    driver: bridge
+
+services:
+  mokc1:
+    image: psp-mock
+    build: .
+    container_name: mock1
+    ports:
+      - "5039:8080"
+    networks:
+      - fazumpix
+  mock2:
+    image: psp-mock
+    build: .
+    container_name: mock2
+    ports:
+      - "5040:8080"
+    networks:
+      - fazumpix
